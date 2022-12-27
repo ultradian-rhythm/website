@@ -4,7 +4,12 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+html {
+    height: 100%;
+}
+
 body {
+    height: 100%;
     margin: 0;
     padding: 0;
     background-color: #000;
@@ -14,6 +19,11 @@ body {
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
     color: #fff;
+}
+
+div.wrapper {
+    height: 100%;
+    overflow-y: auto;
 }
 
 main {
