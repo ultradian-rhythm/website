@@ -125,14 +125,6 @@ figcaption strong {
     color: #fff;
 }
 
-figcaption strong:before {
-    position: relative;
-    top: -1em;
-    display: block;
-    margin: 0 auto;
-    content: '❉';
-}
-
 a {
     text-decoration: underline;
     color: inherit;
