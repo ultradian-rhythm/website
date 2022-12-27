@@ -7,7 +7,6 @@
 body {
     margin: 0;
     padding: 0;
-    background-image: url(scarlet-dawn.jpg);
     background-color: #000;
     background-size: cover;
     background-attachment: fixed;
@@ -20,7 +19,9 @@ body {
 main {
     position: relative;
     z-index: 1;
-    width: 320px;
+    width: 100%;
+    min-width: 320px;
+    max-width: 640px;
     margin: 50px auto;
     padding: 1px;
     background: rgba(0, 0, 0, 0.5);
@@ -28,7 +29,7 @@ main {
     border-radius: 5px;
 }
 
-@media (max-width: 320px) {
+@media (max-width: 740px) {
     main {
         margin-top: 0;
         margin-bottom: 0;
@@ -48,15 +49,16 @@ li {
     text-align: left;
 }
 
-li:first-child {
-    border-top: 0;
-}
-
 li a {
     position: relative;
     display: block;
     padding: 0 20px;
     line-height: 75px;
+    opacity: 0.75;
+}
+
+li a:hover {
+    opacity: 1;
 }
 
 li a img {
@@ -76,7 +78,6 @@ li a em {
     border-radius: 5px;
     font-style: normal;
     line-height: 1.75em;
-    color: #999;
 }
 
 li a:hover em {
@@ -88,6 +89,7 @@ li a:hover em {
 figure {
     margin: 0;
     line-height: 0;
+    backdrop-filter: blur(50px);
 }
 
 figure img {
@@ -96,13 +98,44 @@ figure img {
 }
 
 figcaption {
-    padding: 1em;
-    background: #222;
+    padding: 2em 1em;
+    font-size: 0.9em;
     line-height: 1.25em;
-    font-size: 0.8em;
+    color: #999;
+}
+
+figcaption strong {
+    display: block;
+    margin-bottom: 0.5em;
+    color: #fff;
 }
 
 a {
     text-decoration: underline;
     color: inherit;
+}
+
+footer {
+    margin: 0 0 50px 0;
+    font-size: 0.9em;
+    color: #999;
+}
+
+footer ul {
+    display: inline;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+footer ul li {
+    display: inline-block;
+    margin: 0 0.25em;
+    padding: 0;
+}
+
+footer ul li a {
+    all: unset;
+    text-decoration: underline;
+    cursor: pointer;
 }
