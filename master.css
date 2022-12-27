@@ -17,7 +17,7 @@ body {
     background-attachment: fixed;
     text-align: center;
     font-family: 'Roboto', sans-serif;
-    font-size: 18px;
+    font-size: 16px;
     color: #fff;
 }
 
@@ -32,7 +32,7 @@ main {
     width: 100%;
     min-width: 320px;
     max-width: 640px;
-    margin: 50px auto;
+    margin: 50px auto 1.5em auto;
     padding: 1px;
     background: rgba(0, 0, 0, 0.5);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.75);
@@ -42,7 +42,6 @@ main {
 @media (max-width: 740px) {
     main {
         margin-top: 0;
-        margin-bottom: 0;
     }
 }
 
@@ -114,10 +113,24 @@ figcaption {
     color: #999;
 }
 
+figcaption img {
+    width: 50%;
+    margin-bottom: 1em;
+}
+
 figcaption strong {
-    display: block;
-    margin-bottom: 0.5em;
+    display: inline-block;
+    padding-top: 1em;
+    text-transform: uppercase;
     color: #fff;
+}
+
+figcaption strong:before {
+    position: relative;
+    top: -1em;
+    display: block;
+    margin: 0 auto;
+    content: '❉';
 }
 
 a {
@@ -146,6 +159,9 @@ footer ul li {
 
 footer ul li a {
     all: unset;
-    text-decoration: underline;
+}
+
+footer ul li a:hover {
     cursor: pointer;
+    color: #fff;
 }
